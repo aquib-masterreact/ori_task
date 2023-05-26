@@ -117,7 +117,7 @@ const Images = () => {
     return (
       <div className="modal-overlay" onClick={onClose}>
         <div className="modal-content">
-          <img src={image.url} alt={image.id} />
+          <img src={image.url} alt={image.id} id='zoom' />
         </div>
       </div>
     );
