@@ -4,16 +4,19 @@ import axios from 'axios';
 const Display = () => {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   useEffect(() => {
     
     fetchImages();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     if (page > 1) {
       fetchImages();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
   //fetchImage function
   const fetchImages = async () => {

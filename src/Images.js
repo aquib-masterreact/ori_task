@@ -17,11 +17,13 @@ const Images = () => {
         setImages([]);
         fetchImages();
       }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchTerm]);
     useEffect(() => {
         if (page > 1) {
           fetchImages();
         }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [page]);
       //Fetching Image
     const fetchImages = async () => {
